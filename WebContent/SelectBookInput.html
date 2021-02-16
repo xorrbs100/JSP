@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.code.value){
+			alert("코드를 모르고 할 수 있겠냐?");
+			frm.code.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body bgcolor="yellow">
+	<h2>서적코드 조회입력창</h2>
+	<form action="SelectBookDb.jsp" name="frm" onsubmit="return chk()">
+		코드 : <input type="text" name="code"><p>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>
