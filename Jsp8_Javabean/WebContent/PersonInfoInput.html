@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+		background: yellow;
+		padding: 30px;
+		width: 500px;
+		height: 300px;
+	}
+</style>
+</head>
+<body>
+	<h2>개인정보를 입력해주세요</h2>
+	<hr>
+	<div>
+		<form action="PersonInfoInputControl.jsp">
+			이름 : <input type="text" name="name" required><br>
+			나이 : <input type="text" name="age" required><br>
+			성별 : <input type="radio" name="gender" value="여자" required>여자
+				 <input type="radio" name="gender" value="남자" required>남자<br>
+			주소 : <input type="text" name="addr"><br><br>
+			
+			<input type="submit" value="등록">
+		</form>
+	</div>
+</body>
+</html>

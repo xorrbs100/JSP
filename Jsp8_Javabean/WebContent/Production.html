@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!product.code.value) {
+			alert("코드를 입력해주세요.")
+			product.code.focus();
+			return false;
+		}
+		if(!product.name.value) {
+			alert("상품명을 입력해주세요.")
+			product.name.focus();
+			return false;
+		}
+		if(!product.cost.value) {
+			alert("상품가격을 입력해주세요.")
+			product.cost.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+<style type="text/css">
+	table {
+		border-collapse: collapse;
+		background: cyan;
+		box-shadow: 1px 1px lightgray;
+		width: 300px;
+		height: 150px;
+	}
+	
+	input {
+		border: none;
+	}
+	
+	input:focus {
+		outline: none;
+	}
+</style>
+</head>
+<body>
+	<form action="ProductionControl.jsp" name="product" onsubmit="return chk()">
+		<h3>상품 재고등록</h3>
+		<table border="1">
+			<tr><th>상품코드</th><td><input type="text" name="code"></td></tr>
+			<tr><th>상품명</th><td><input type="text" name="name"></td></tr>
+			<tr><th>상품가격</th><td><input type="text" name="cost"></td></tr>
+			<tr><th>재고수량</th><td><input type="text" name="count"></td></tr>
+		</table><br>
+		
+		<input type="submit" value="등록">
+		
+	</form>
+</body>
+</html>
