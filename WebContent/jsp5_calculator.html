@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num1.value||!frm.num2.value){
+			alert("숫자를 입력해 주세요");
+			frm.num1.focus();
+			return false;
+		}
+		if(isNaN(frm.num1.value)||isNaN(frm.num2.value)){
+			alert("문자놉");
+			frm.num1.focus();
+			return false;
+		}
+	}
+
+</script>
+</head>
+<body>
+	<form action="cal" name="frm" method="post" onsubmit="return chk()">
+		<label for="m1">+</label>
+		<input type="radio" name="cal" id="m1" value="+"><br>
+		<label for="m1">-</label>
+		<input type="radio" name="cal" id="m1" value="-"><br>
+		<label for="m1">*</label>
+		<input type="radio" name="cal" id="m1" value="*"><br>
+		<label for="m1">/</label>
+		<input type="radio" name="cal" id="m1" value="/"><br>
+		<label for="m2">각 상자에 숫자 두개를 입력해 주세요</label>
+		<input type="text" name="num1" value="">
+		<input type="text" name="num2" value="">
+		<input type="submit" value="완료">
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#text{background: #F6F6F6 ; color: #0100ff;}
+</style>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num.value){
+			alert("누적합계 할 숫자를 입력해 주세요");
+			frm.num.focus();
+			return false;
+		}
+		if(isNaN(frm.num.value)){
+			alert("숫자를 입력해 주셔야 합니다.");
+			frm.num.focus();
+			return false;
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<h2>누적합계 할 숫자</h2>
+	<form action="Sum" name="frm" method="post" onsubmit="return chk()">
+		<input type="text" name="num" id="text">
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>
