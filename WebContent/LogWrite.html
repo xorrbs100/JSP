@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LogWrite.html</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.name.value){
+			alert("이름을 입력해 주세요")
+			frm.name.focus();
+			return false;
+		}
+		return true;
+	}
+
+</script>
+</head>
+<body>
+	<h2>이름을 입력하세요</h2>
+	<form action="LogWrite.jsp" name="frm" method="get" onsubmit="return chk()">
+		<fieldset>
+			<legend>이름</legend>
+			<input type="text" name="name" ><p>
+			<input type="submit" value="확인">
+		</fieldset>
+	</form>
+</body>
+</html>
