@@ -1,0 +1,26 @@
+<!-- 
+	요청에 따른 값을 입력받는 방식 3가지
+	
+		1. getParameter("name") 
+		2. getParameterValues()
+		3. getParameterName()
+		
+	첫번째 방식 : getParameter()로 값 읽어오기	
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>하나의 값을 입력 받을때</title>
+</head>
+<body>
+	<h3>로그인 창</h3><br>
+	<form action="login1" method="post" name="frmlogin" enctype="utf-8">
+		아 이 디 : <input type="text" name="user_id"><br>
+		비밀번호 : <input type="text" name="user_pw"><br><br><br>
+		<input type="submit" value="login">
+		<input type="reset" value="reset">
+	</form>
+	
+</body>
+</html>

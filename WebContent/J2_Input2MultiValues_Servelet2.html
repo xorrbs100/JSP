@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>name하나에 여러개의 값을 전달받는 법(배열)</title>
+</head>
+<body>
+	<h3>수강과목</h3>
+	<form action="input1" name="frmInput" method="get" enctype="utf-8">
+		아 이 디 : <input type="text" name="user_id">
+		비밀번호 : <input type="text" name="user_pw">
+		
+		<h4>수강과목을 선택해 주세요</h4>
+		<input type="checkbox" name="subject" value="Java">Java
+		<input type="checkbox" name="subject" value="HTML">HTML
+		<input type="checkbox" name="subject" value="CSS">CSS
+		<input type="checkbox" name="subject" value="Database">Database
+		<input type="checkbox" name="subject" value="JSP">JSP		
+		
+		<input type="submit" value="과목선택">
+		<input type="reset" value="reset">
+	</form>
+</body>
+</html>

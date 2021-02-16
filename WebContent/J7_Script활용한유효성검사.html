@@ -1,0 +1,51 @@
+<!-- 
+
+   유효성검사
+      - 오류메세지 처리
+         1) 자바스크립트로 처리
+         2) 서블릿에서 구현
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function chk(){
+      
+      //form태그의 name속성으로    form태그 객체를 가져옴
+      var formLogin = document.frmlogin;
+      
+      var user_id = formLogin.id.value;
+      var user_pw = formLogin.pw.value;
+      
+      //조건문으로 비교
+      if((user_id.length == 0 || user_id.length=="") 
+            ||   (user_pw.length==0 || user_pw.length=="")){
+         alert("아이디와 비밀번호는 필수 입력사항입니다.");
+         
+      }else{
+         
+         formLogin.method = "post";
+         formLogin.action = "login4";
+         formLogin.submit();
+         
+      }
+      
+   }
+
+</script>
+</head>
+<body>
+
+   <h3>로그인 창</h3><br>
+   
+   <form action="" method="" name="frmlogin" enctype="utf-8">
+   
+      아이디 : <input type="text" name="id"><br>
+      비밀번호 : <input type="text" name="pw"><br><br><br>
+      
+      <input type="button" onclick="chk()" value="로그인">
+      <input type="reset" value="초기화">

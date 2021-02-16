@@ -1,0 +1,42 @@
+<!-- 
+	Response(응답처리)
+		: 톰캣 컨테이너가 만들어 놓은 Response객체를 네트워크에 실어서 전송한다.
+		
+	1. 구현절차
+		1) 응답처리할 내용구현은 doget() dopost() 메소드 안에서 처리한다.
+		2) HttpServeletResponse클래스 객체를 이용한다(resp)
+		3) setContentType()이용해서 전송할 데이터의 종류 (MIME-TYPE)을 지정
+		4) 서블릿과 브라우저의 응답처리 과정은 자바I/O입출력 스트림을 이용출력한다.
+			PrintWriter out = resp.getWrite() 
+		5) 닫아준다(close)
+	2. 구현프로세스
+		
+		웹 브라우저 -- > 네트워크 -- > 서블릿 : 네트워크로부터 데이터를 받는다(자바 Input)
+				< --		< --	: 네트워크에 데이터를 전송한다 (자바 Output)
+				네트워크에 실어 보낼때
+					1. 어떤 종류의 데이터를 전송하는지 미리 알려줘야 더 빠르게 처리가능
+					2. 톰캣 컨테이너에서 미리 설정해 놓은 데이터 종류(MIME-TYPE)중지 하나지정
+					
+			*MIME-TYPE
+				- HTML 전송시 : text/html	-- 대부분 데이터는 이것으로 지정한다.
+				- 일반 text전송시: text/plain
+				- xml데이터 전송시 : application/html
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>응답처리</title>
+</head>
+<body>
+	<h3>로그인 창</h3>
+	<form action="login2" name="frmlogin" method="get" enctype="utf-8">
+		아 이 디 : <input type="text" name="user_id"><br>
+		비밀번호 : <input type="text" name="user_pw"><br><br><br>
+		
+		<input type="submit" value="로그인">
+		<input type="reset" value="재입력">
+	</form>
+</body>
+</html>

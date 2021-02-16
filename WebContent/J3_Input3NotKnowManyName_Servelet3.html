@@ -1,0 +1,37 @@
+<!-- 
+	* Enumeration인터페이스
+		객체들의 집합(Vector)에서 각각 객체들을 한순간에 하나씩 처리할 수 있는 메소드를 제공하는 컬렉션
+		
+		. boolean hasMoreElements()
+			: Vector로 부터 생성된 Enumeration의 요소가 있으면 true
+		. Object nextElement()
+			: Enumeration내의 다음 요소를 반환
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>name을 잘 알수 없을때, 기억하기 힘들때- getparameterNames()</title>
+</head>
+<body>
+	<h3>회원가입</h3>
+	<form action="input2" name="frmInput" method="get" enctype="utf-8">
+		아이디 : <input type="text" name="user_id"><br>
+		비밀번호 :<input type="text" name="user_pw"><br><br><br>
+		
+		이름 : <input type="text" name="name"><p>
+		별명 : <input type="text" name="name"><p>
+		나이 : <input type="text" name="age"><p>
+		성별 : <label for="g1">남자</label>
+				<input type="radio" name="gender" for="g1" value="남자">
+			<label for="g2">여자</label>
+				<input type="radio" name="geder" for="g2" value="여자">		
+			<label for="address">주소</label>
+				<input type="text" name="address" id="address"><br><br><br>
+				
+			<input type="submit" value="회원가입">
+			<input type="reset" value="재입력">
+							
+	</form>
+</body>
+</html>
