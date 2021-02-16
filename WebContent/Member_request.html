@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>회원가입</h2>
+	
+	<form action="Member_response.jsp" method="post" name="frm" enctype="utf-8">
+		이름 : <input type="text" name="name"><br>
+		나이 : <input type="text" name="age"><br>
+		성별 :<label for="g1">남자</label>
+				<input type="radio" name="gender" id="g1" value="남자">
+			<label for="g2">여자</label>
+				<input type="radio" name="gende" id="g2" value="여자"><p>		
+		수신메일 : <label for="m1">공지</label>
+				<input type="checkbox" name="mail" id="m1" value="공지">
+				<label for="m1">광고</label>
+				<input type="checkbox" name="mail" id="m2" value="광고">
+				<label for="m1">배송</label>
+				<input type="checkbox" name="mail" id="m3" value="배송">
+				<label for="m1">스팸</label>
+				<input type="checkbox" name="mail" id="m4" value="스팸">
+				<p>
+		취미 :<br><select name="hobby" size="3" multiple>
+				<option>게임
+				<option>스키
+				<option>독서
+				<option>졸기
+				<option>울기
+				<option>코골기
+			</select><p>
+			<input type="submit" value="확인">
+				 
+	
+	</form>
+</body>
+</html>
