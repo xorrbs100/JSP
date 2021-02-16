@@ -1,0 +1,6 @@
+member_info=Logic.L03_Member_info
+member_join=Logic.L02_Member_join
+member_login=Logic.L04_Member_login
+member_null=Logic.L01_Member_null
+member_input=Logic.L05_Member_input
+
